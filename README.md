@@ -21,13 +21,11 @@ Secure & Performant Media Delivery: High-speed streaming and parallel asset uplo
        │ (HTTPS REST API)
        
        ▼
-       
 [FastAPI Gateway (EC2/App Runner)]
 
        │ (Boto3 SDK / IAM Authenticated)
        
        ▼
-       
 [AWS Step Functions (State Machine Orchestrator)]
 
        ├── 1. Augmentation Phase ──> [ChromaDB Vector Store]
@@ -54,18 +52,31 @@ Plaintext
 
 
 ├── .github/workflows/     # CI/CD pipelines
+
 ├── backend/               # FastAPI application gateway
+
 │   ├── app/
+
 │   │   ├── api/           # Endpoints for prompt submission and status polling
+
 │   │   ├── core/          # AWS Boto3 configurations and Step Function triggers
+
 │   │   └── main.py        # Application entry point
+
 │   └── Dockerfile
+
 ├── frontend/              # Next.js 15 UI client
+
 ├── rag_pipeline/          # Knowledge base engineering
+
 │   ├── data/              # Curated JSON master files (sourced from HF, Kaggle, GitHub)
+
 │   ├── index_documents.py # Script for document cleaning, splitting, and ChromaDB loading
+
 │   └── embedder.py        # BGE embedding layer configuration
+
 └── README.md
+
 ⚡ Quick Start
 Prerequisites
 Python 3.10+
