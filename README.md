@@ -1,7 +1,9 @@
 Music Architect AI 🎵🎨
+
 An enterprise-grade, cloud-native multimodal AI platform that orchestrates real-time, high-fidelity music generation and synchronized visual artwork synthesis.
 
 By leveraging a Retrieval-Augmented Generation (RAG) pipeline grounded in cultural musicology and a robust AWS serverless orchestration layer, Music Architect AI bypasses the traditional limitations and computational overhead of fine-tuning, delivering deterministic, culturally accurate audio-visual assets in under 12 seconds.
+
 
 🚀 Key Features
 Intelligent Prompt Augmentation (RAG): Uses ChromaDB and bge-small-en-v1.5 embeddings to intercept user prompts and inject precise, real-world music theory metrics (BPM ranges, specific musical keys/modes, hybrid instrumentation briefs) sourced from curated global datasets.
