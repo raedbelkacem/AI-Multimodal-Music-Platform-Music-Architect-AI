@@ -15,18 +15,31 @@ Dedicated GPU Inference: Hosts advanced foundation models (Qwen 2.5-7B, ACE-Step
 Secure & Performant Media Delivery: High-speed streaming and parallel asset uploads directly to AWS S3, served to the client via secure, expiring S3 Presigned URLs.
 
 🏗️ System Architecture
-[User Browser: Next.js 15] 
+
+[User Browser: Next.js 15] .
+
        │ (HTTPS REST API)
+       
        ▼
+       
 [FastAPI Gateway (EC2/App Runner)]
+
        │ (Boto3 SDK / IAM Authenticated)
+       
        ▼
+       
 [AWS Step Functions (State Machine Orchestrator)]
+
        ├── 1. Augmentation Phase ──> [ChromaDB Vector Store]
+       
        ├── 2. Dispatch Phase ──────> [Amazon SageMaker Endpoint (EC2 G5)]
+       
        │                                  ├── Audio Generation (ACE-Step 1.5)
+       
        │                                  └── Image Generation (SDXL Turbo)
+       
        └── 3. Delivery Phase ──────> [AWS S3 Bucket] ──> Secure URL to Client
+       
 🛠️ Tech Stack
 Frontend: Next.js 15, React Server Components (RSC), TailwindCSS
 
